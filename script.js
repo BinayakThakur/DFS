@@ -102,17 +102,37 @@ function play(){
         }
     }
     let val=dfs(ngraph[0]);
+    animate(val);
     out("<br>")
     out("It will traverse from : ")
     for( i of val){
+       
         out(i+" ");
     }
+    
      myfunc=new Array(x);
      board=new Array(x);
      mygraph;
      ngraph=[];
      trav=[];
      
+}
+function pausecomp(millis)
+{
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
+}
+
+function animate(trav){
+    console.log(trav)
+    for(let i of trav){
+        pausecomp(10);
+        var nbutton=document.getElementById(i);
+        nbutton.innerHTML="<button class=btn-danger>"+i+"</button>";
+        
+    }
 }
 function doSetTimeout(i) {
     setTimeout(frames, 350,id);
