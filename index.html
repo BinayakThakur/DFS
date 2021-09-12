@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Depth First Traversal</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <script src="script.js"> 
+        
+    </script>
+    <style>
+        .space{
+            height: 5%;
+            
+        }
+     
+        .card-5 {
+            box-shadow: 0 19px 38px rgba(195, 0, 255, 0.836), 0 15px 12px rgba(0, 0, 0, 0.13);
+            
+        }
+       .dim{
+           height: 20%;
+           width: 100%;
+       }
+       .dim1{
+           height: 120%;
+           width: 100%;
+       }
+       .box{
+           width: 100%;
+           height: 500px;
+           font-family: Inconsolata;
+           padding-left:3%;
+           padding-top: 2%;
+           overflow: auto;
+       }
+       .center{
+           padding-left: 10%;
+       }
+    </style>        
+</head>
+<body>
+    <div class="space"></div>
+    <div class="container">
+        <div class="row">
+            
+            <div class="card-5 " style="width: 25rem;">
+                
+                <div class="card-body mb-3 ">
+                    Enter the X cells : <div class="col"><input type="text" id="x" placeholder="Limit is 11 cells"></div>
+                    Enter the Y cells :<div class="col"><input type="text" id="y" placeholder="Limit is 11 cells"></div>
+                    
+                    <div class="col"><div class="mt-2" ><button onclick="grid()" id="done" class="btn btn-dark">Create</button><button onclick="play()" class=" btn btn-dark ms-2">Start</button><button onclick="Reset()" id="reset" class="btn btn-dark ms-2">Reset</button></div>
+                    
+                </div>
+                
+              </div>
+              
+        </div>  
+        <div class="col">
+            <div class="box card-5">
+                <h1>
+                    Depth First Traversal<br>
+                </h1>
+                in mobile device 8x8 is recommended,Traversal will start from top left node
+                <h6 id="con" class="mb-2">
+                    <div class="col">
+            
+                        <div class="row">
+                            <div id="myspace" class="mx-auto ms-3 mt-5"></div>
+                        </div>
+                        <div class="row mt-5">
+                            <div id="path" class="h6"></div>
+                        </div>
+                    </div>
+                </h4>
+            </div>
+          </div>   
+    </div>
+</body>
+</html>
